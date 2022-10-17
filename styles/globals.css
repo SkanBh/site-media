@@ -1,26 +1,262 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;700;800&display=swap");
 
 * {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+html,
+body:lang(fr) {
+  padding: 0;
+  margin: 0;
+  font-family: Cairo;
+  direction: ltr;
+}
+
+html,
+body:lang(ar) {
+  padding: 0;
+  margin: 0;
+  font-family: Cairo;
+  direction: rtl;
+}
+
+/*----------HEADER LOGO ALIGN----------*/
+.logoHeader:lang(fr) {
+  text-align: left;
+}
+.logoHeader:lang(ar) {
+  text-align: right;
+}
+
+/*----------LANGUAGE MARGIN (AR/FR)----------*/
+.language:lang(fr) {
+  margin-left: 8px;
+}
+.language:lang(ar) {
+  margin-right: 8px;
+}
+
+/*----------MENU MARGIN (AR/FR)----------*/
+.menu:lang(fr) {
+  margin-left: 10px;
+}
+.menu:lang(ar) {
+  margin-right: 10px;
+}
+
+/*----------HEADER VERTICAL LINES----------*/
+.separateur:after {
+  content: "  ";
+  display: inline-block;
+  width: 1px;
+  height: 20px;
+  background: #c0c0c0;
+  position: relative;
+  margin: 12px 12px;
+}
+
+/*----------HEADER SEARCH ICON----------*/
+.css-fryj5r-MuiInputBase-root-MuiInput-root {
+  color: #D32489; 
+}
+.css-fryj5r-MuiInputBase-root-MuiInput-root:before {
+  border-bottom: none; 
+}
+.css-fryj5r-MuiInputBase-root-MuiInput-root:after {
+  border-bottom: 1px solid #D32489;
+}
+.css-fryj5r-MuiInputBase-root-MuiInput-root:hover:not(.Mui-disabled):before {
+  border-bottom: 1px solid #D32489;
+}
+
+/*----------HOVER ON SIDEBAR MENU----------*/
+.css-h4pi96-MuiButtonBase-root-MuiListItemButton-root:hover {
+  color: #D32489;
+}
+
+/*----------TITLES HORIZONTAL LINES----------*/
+h4:before {
+  content: " ";
+  width: 125px;
+  height: 15px;
+  background: #843592;
+  position: absolute;
+  top: 16px;
+}
+
+.lifestyle:lang(fr):before {
+  content: " ";
+  width: 16%;
+  height: 30px;
+  background: rgba(212, 36, 138, 0.5);
+  position: absolute;
+  top: 0;
+  left: 11.5%;
+}
+.lifestyle:lang(ar):before {
+  content: " ";
+  width: 16%;
+  height: 30px;
+  background: rgba(212, 36, 138, 0.5);
+  position: absolute;
+  top: 0;
+  right: 9%;
+}
+
+/*----------COLOR GRADIENT----------*/
+.degrade {
+  background: linear-gradient(90deg, #843592, #d4248a);
+}
+
+/*----------CARROUSEL ARROWS CONFIG----------*/
+.slick-slider .slick-arrow {
+  font-size: 0;
+  line-height: 0;
+  position: absolute;
+  top: -41px;
+  display: block;
+  width: 35px;
+  height: 28px;
+  padding: 0;
+  transform: translate(0, -50%);
+  cursor: pointer;
+  color: #843592;
+  border: none;
+  outline: none;
+  background: #efefef;
+}
+
+.slick-slider .slick-next:lang(ar) {
+  left: 50px;
+}
+.slick-slider .slick-prev:lang(ar) {
+  position: absolute;
+  left: 9px;
+  right: unset;
+}
+
+.slick-slider .slick-next:lang(fr) {
+  right: 9px;
+}
+.slick-slider .slick-prev:lang(fr) {
+  position: absolute;
+  right: 50px;
+  left: unset;
+}
+
+.slick-slider .slick-prev:before {
+  content: "‹";
+}
+.slick-slider .slick-next:before {
+  content: "›";
+}
+
+.slick-slider .slick-prev:before,
+.slick-slider .slick-next:before {
+  font-size: 34px;
+  line-height: 0.1;
+  color: #843592;
+}
+
+/*----------CAROUSEL3 (HOROSCOPE) ARROWS CONFIG----------*/
+.testing1 .testing.slick-slider .slick-next:lang(fr) {
+  bottom: -10px;
+  top: auto;
+  right: 0;
+}
+.testing1 .testing.slick-slider .slick-prev:lang(fr) {
+  bottom: -10px;
+  top: auto;
+  right: 40px;
+}
+.slick-slider.testing {
+  padding-bottom: 35px;
+}
+
+.testing1 .testing.slick-slider .slick-next:lang(ar) {
+  bottom: -10px;
+  top: auto;
+  left: 40px;
+}
+.testing1 .testing.slick-slider .slick-prev:lang(ar) {
+  bottom: -10px;
+  top: auto;
+  left: 0px;
+}
+
+/*----------FEATURED LAST LINE BORDER NONE----------*/
+.test :last-child.test2 :nth-child(2) {
+  border-bottom: none;
+}
+
+/*----------HORIZONTAL CARD PADDING----------*/
+.grid :nth-child(1):lang(fr) {
+  padding-right: 8px;
+}
+.grid :nth-child(2):lang(fr) {
+  padding-left: 8px;
+}
+.grid :nth-child(1):lang(ar) {
+  padding-left: 8px;
+}
+.grid :nth-child(2):lang(ar) {
+  padding-right: 8px;
+}
+.test2 .label:lang(fr) {
+  padding-left: unset;
+}
+.test2 .label:lang(ar) {
+  padding-right: unset;
+}
+
+#featured :nth-child(1){
+  padding:unset
+}
+#featured :nth-child(2){
+  padding:unset
+}
+
+/*----------VERTICAL CARD MARGIN (LEFT/RIGHT)----------*/
+.vbox:lang(fr) {
+  margin-left: 3%;
+}
+.vbox:lang(ar) {
+  margin-right: 3%;
+}
+/*----------CARROUSEL VIDEO BRIGHTNESS----------*/
+.brightness {
+  filter: brightness(60%);
+}
+.brightness:hover {
+  filter: brightness(100%);
+}
+
+/*----------FOOTER TEXTFIELD----------*/
+.css-xqr4nw-MuiInputBase-root-MuiInput-root:before {
+  border-bottom: 1px solid white;
+}
+.css-xqr4nw-MuiInputBase-root-MuiInput-root:after {
+  border-bottom: 1px solid white;
+}
+.css-xqr4nw-MuiInputBase-root-MuiInput-root:hover {
+  border-bottom: 1px solid white;
+}
+
+/*----------FOOTER ICONS----------*/
+.ytIcon:lang(ar) {
+  margin-right: 4%;
+}
+.fbIcon:lang(ar) {
+  margin-left: 4%;
+}
+.ytIcon:lang(fr) {
+  margin-left: 4%;
+}
+.fbIcon:lang(fr) {
+  margin-right: 4%;
+}
+
+
+.carrousel2:lang(ar){
+  direction: ltr
 }

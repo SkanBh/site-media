@@ -1,7 +1,11 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-  swcMinify: true,
-}
+const nextTranslate = require("next-translate");
 
-module.exports = nextConfig
+module.exports = nextTranslate({
+  reactStrictMode: true,
+  
+  env: { API: "https://api.hakaekonline.com/api/" },
+  images: {
+    domains: ["api.hakaekonline.com"],
+  },
+});
